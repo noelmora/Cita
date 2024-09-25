@@ -1,0 +1,94 @@
+/* Fondo con degradado y formas */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+  }
+  
+  body::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+  }
+  
+  /* Estilo para la cita */
+  #quote {
+    font-size: 28px;
+    color: #2c3e50;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  #quote:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Estilo para el autor */
+  #author {
+    font-size: 18px;
+    color: #34495e;
+    margin-top: 10px;
+  }
+  
+  /* Botón para nueva cita */
+  #new-quote {
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  #new-quote:hover {
+    background-color: #2980b9;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+  
+  /* Efecto de animación para las formas */
+  @keyframes move {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+  
+  body::before {
+    animation: move 6s infinite ease-in-out;
+  }
+  
+  body::after {
+    animation: move 8s infinite ease-in-out;
+  }
+  
