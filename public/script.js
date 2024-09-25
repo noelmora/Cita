@@ -1,6 +1,6 @@
 async function fetchQuote() {
     try {
-      const response = await fetch('https://cita-ol19.onrender.come');
+      const response = await fetch('https://cita-ol19.onrender.come/quote');
       const data = await response.json();
       document.getElementById('quote').innerText = `"${data.quote}"`;
       document.getElementById('author').innerText = `- ${data.author}`;
